@@ -1,38 +1,20 @@
 import React, { Component } from 'react';
+import resumeData from '../resumeData';
+import PortfolioItem from './PortfolioItem';
 export default class Porfolio extends Component {
   render() {
-    let resumeData = this.props.resumeData;
+
     return (
       <section id="portfolio">
-        <div className="row">
-          <div className="twelve columns collapsed">
-            <h1>Check Out Some of My Works.</h1>
-            <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-              {
-                resumeData.portfolio && resumeData.portfolio.map((item) => {
-                  return (
-                    <div className="columns portfolio-item">
-                      <div className="item-wrap">
-                        <a href="#modal-01">
-                          <img src={`${item.imgurl}`} className="item-img" />
-                          <div className="overlay">
-                            <div className="portfolio-item-meta">
-                              <h5>{item.name}</h5>
-                              <p>{item.description}</p>
-                              
-                            </div>
-
-                            
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </div>
-          </div>
-        </div>
+        <h4 style={{fontSize:"35px",fontFamily:'sans-serif'}} className="text-center">Some Of My Projects </h4>    
+        <div className="container pt-2 portfolio-area">
+           
+      <div className="row mt-5 pt-2 d-flex justify-content-center">
+       <div className="col-md-12">
+       {resumeData.portfolio.map(item => <PortfolioItem key={item.link} item={item} />)}
+       </div>
+      </div>
+    </div>
       </section>
     );
   }

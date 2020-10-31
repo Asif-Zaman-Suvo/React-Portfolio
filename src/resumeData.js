@@ -2,6 +2,7 @@ let resumeData = {
     
     "name": "Md Asifuzzaman Suvo",
     "role": "Front-End Web Developer",
+    "resumeDownload":"https://drive.google.com/file/d/1e92nt4tXACbowl2_sM4TOsQ9eTrKS5v5/view",
     
     
     "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
@@ -75,6 +76,9 @@ let resumeData = {
       },
       {
         "skillname":"MongoDB"
+      },
+      {
+        "skillname":"Heroku"
       },
       
     ],
